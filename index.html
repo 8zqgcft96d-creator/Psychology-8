@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>心理測驗</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- 封面區 -->
+    <section id="start-screen" class="screen active">
+      <h1 class="title">心理測驗</h1>
+      <button id="start-btn" class="start-btn">開始測驗</button>
+    </section>
+
+    <!-- 題目卡片區 -->
+    <section id="quiz-screen" class="screen hidden">
+      <div id="progress-bar"><div id="progress-fill"></div></div>
+      <div id="question-card" class="card"></div>
+    </section>
+
+    <!-- 結果區 -->
+    <section id="result-screen" class="screen hidden">
+      <h2 class="result-title">你的測驗結果</h2>
+      <canvas id="radarChart"></canvas>
+
+      <div id="result-text" class="result-text"></div>
+
+      <button id="download-chart" class="btn">下載雷達圖</button>
+      <button id="retry-btn" class="btn">重新測驗</button>
+    </section>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
