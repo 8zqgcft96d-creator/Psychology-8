@@ -1,0 +1,190 @@
+/* ==== 全域設定 ==== */
+body {
+    font-family: "DFKai-SB", "BiauKai", "KaiTi", serif;
+    background: #f2f2f2;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+/* 封面區 */
+#startScreen {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.start-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.start-desc {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.start-btn {
+    padding: 15px 40px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    background: #000;
+    color: white;
+    transition: 0.2s;
+}
+
+.start-btn:hover {
+    background: #444;
+}
+
+/* ==== 題目小卡 ==== */
+#quizContainer {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.question-card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.question-text {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* ==== 圓形選項按鈕 ==== */
+.option {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: #fafafa;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.option:hover {
+    border: 2px solid #444;
+}
+
+.option-circle {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #444;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.option.selected {
+    background: #e4e4e4;
+    border: 2px solid #000;
+}
+
+.option.selected .option-circle {
+    background: #000;
+}
+
+/* ==== 按鈕 ==== */
+.next-btn, .submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #000;
+    color: white;
+    transition: 0.2s;
+}
+
+.next-btn:hover, .submit-btn:hover {
+    background: #444;
+}
+
+/* ==== 進度條 ==== */
+#progressBar {
+    width: 80%;
+    margin: 20px auto;
+    height: 14px;
+    background: #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background: #000;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+/* ==== 結果區 ==== */
+#resultScreen {
+    display: none;
+    text-align: center;
+    padding: 30px;
+}
+
+#chartContainer {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.result-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.analysis-block {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 16px;
+    max-width: 650px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.analysis-block h2 {
+    font-size: 24px;
+}
+
+.download-btn, .restart-btn {
+    padding: 14px 28px;
+    font-size: 20px;
+    margin: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #000;
+    color: white;
+    cursor: pointer;
+}
+
+.download-btn:hover, .restart-btn:hover {
+    background: #444;
+}
+
+/* 手機版調整 */
+@media (max-width: 600px) {
+    .question-card {
+        padding: 20px;
+    }
+    .question-text {
+        font-size: 20px;
+    }
+    .option {
+        padding: 10px;
+    }
+}
